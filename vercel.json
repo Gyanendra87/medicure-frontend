@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/login.html",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://gyanendra87-medicure.hf.space/$1"
+    }
+  ]
+}
