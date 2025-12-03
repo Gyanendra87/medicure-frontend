@@ -549,7 +549,7 @@
             try {
                 console.log('Fetching remedies for:', disease);
                 
-                const res = await fetch(`http://127.0.0.1:8000/remedies/?disease=${encodeURIComponent(disease)}`, {
+                const res = await fetch(`https://gyanendra87-medicure.hf.space/remedies/?disease=${encodeURIComponent(disease)}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -686,7 +686,7 @@
                         <div>
                             <p><strong>Unable to fetch remedies</strong></p>
                             <p>Error: ${err.message}</p>
-                            <p>Make sure the backend is running on http://127.0.0.1:8000</p>
+                            <p>Make sure the backend is running on https://gyanendra87-medicure.hf.space</p>
                         </div>
                     </div>
                 `;
@@ -711,7 +711,7 @@
         window.addEventListener('load', async () => {
             console.log('=== Backend Connection Test ===');
             try {
-                const response = await fetch('http://127.0.0.1:8000/health');
+                const response = await fetch('https://gyanendra87-medicure.hf.space/health');
                 console.log(`✓ Backend Status: ${response.status} - ${response.ok ? 'Running' : 'Error'}`);
             } catch (error) {
                 console.log(`✗ Backend Connection Error: ${error.message}`);

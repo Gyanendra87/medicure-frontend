@@ -302,7 +302,7 @@ The summary will include:
                 const timeoutMs = 60000;
                 const tId = setTimeout(() => controller.abort(), timeoutMs);
 
-                const response = await fetch('http://127.0.0.1:8000/report/upload', {
+                const response = await fetch('https://gyanendra87-medicure.hf.space/report/upload', {
                     method: 'POST', body: formData, signal: controller.signal
                 });
 
@@ -427,7 +427,7 @@ Check browser console for more details.`);
                 setStatus('status-processing','⏳ Loading...');
                 showLoading(true);
 
-                const resp = await fetch(`http://127.0.0.1:8000/report/${encodeURIComponent(reportId)}`, { method:'GET' });
+                const resp = await fetch(`https://gyanendra87-medicure.hf.space/report/${encodeURIComponent(reportId)}`, { method:'GET' });
                 if (!resp.ok) throw new Error('Report not found on server');
                 const data = await resp.json();
                 if (data.success && data.report) {
